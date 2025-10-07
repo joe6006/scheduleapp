@@ -1,0 +1,35 @@
+ body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .calendar {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .header button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+    .day {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .day.today {
+      background-color: #f0f8ff;
+      font-weight: bold;
+    }
