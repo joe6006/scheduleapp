@@ -16,10 +16,23 @@ function renderCalendar() {
         'January', 'February', 'March', 'April', 'May', 'June', 'July',
         'August', 'September', 'October', 'November', 'December'
     ];
+    
+//set weekdays
+    const weekdaysContainer = document.getElementById('weekdays');
+    weekdaysContainer.innerHTML = '';
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    for(let i = 0; i<=6; i++){
+        const weekDiv = document.createElement('div');
+        weekDiv.textContent= daysOfWeek[i];
+        weekDiv.classList.add('weekday');
+        weekdaysContainer.appendChild(weekDiv)
+    }
 
+    //set current month and year
     monthYear.textContent = `${monthNames[month]} ${year}`;
-    daysContainer.innerHTML = '';
 
+
+    daysContainer.innerHTML = '';
     const firstDay = new Date(year, month, 1).getDay();
     const lastDate = new Date(year, month + 1, 0).getDate();
 
@@ -33,7 +46,11 @@ function renderCalendar() {
     // Add actual day divs
     for (let day = 1; day <= lastDate; day++) {
         const dayDiv = document.createElement('div');
-        dayDiv.textContent = day;
+        const childDayText = document.createElement('h3');
+        childDayText.textContent = day;
+        dayDiv.appendChild(childDayText);
+        
+        childDayText.classList.add('child-style');
         dayDiv.classList.add('day');
 
         const today = new Date();
@@ -44,7 +61,7 @@ function renderCalendar() {
         ) {
             dayDiv.classList.add('today');
         }
-
+        
         daysContainer.appendChild(dayDiv);
     }
 }
