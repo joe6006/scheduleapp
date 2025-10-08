@@ -56,8 +56,8 @@ const addEvent= document.getElementById('addEvent');
                 });
 
             //append
+    
             
-            createContent.appendChild(createClose);
             eventForm.appendChild(eventDate);
             eventForm.appendChild(dateInput);
             eventForm.appendChild(eventTime);
@@ -65,6 +65,7 @@ const addEvent= document.getElementById('addEvent');
             eventForm.appendChild(eventName)
             eventForm.appendChild(nameInput);
             createContent.appendChild(eventForm);
+            createContent.appendChild(createClose);
             createBox.appendChild(createContent);
             document.body.appendChild(createBox);
                                 
