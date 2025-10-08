@@ -7,23 +7,30 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="calendar">
-    <div class="header">
-      
-      <h1 id="monthYear"></h1>
-      <button id="prev">←</button>
-      <button id="next">→</button>
-      
-    </div>
-    <div>
-      <div id="weekdays" class="weekdays"></div>
-      <div class="days" id="days">
-        <div class="child-style"></div>
-      </div>
-    </div>
-  </div>
+  
 
+
+    <div class="calendar">
+      <div class="header">
+        
+        <h1 id="monthYear"></h1>
+        <button id="prev">←</button>
+        <button id="addEvent" class="openPopup">add events</button>
+        <button id="next">→</button>
+      
+      </div>
+      
+      <div>
+        <div id="weekdays" class="weekdays"></div>
+        <div class="days" id="days">
+          <div class="child-style"></div>
+        </div>
+      </div>
+      
+      
     </div>
+    
+    
     <script src="script.js"> </script>
 </body>
 </html>

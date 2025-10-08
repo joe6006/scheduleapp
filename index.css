@@ -2,6 +2,55 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
+
+  .popupOverlay {
+  display: none ;  /* Hidden by default */
+  position: fixed; /* Stays in place */
+  z-index: 1000; /* Stacks on top of other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  display: flex; /* For centering content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.popupContent {
+ 
+  background-color: #fefefe;
+  margin: auto; /* Centered automatically with flexbox */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Adjust as needed */
+  max-width: 500px; /* Max width for larger screens */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: fadeIn 0.5s; /* Simple fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Styles for the button to open/close the popup */
+.openPopup, .closePopup {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.closePopup {
+  background-color: #dc3545;
+}
+
+
+
     .calendar {
       display: inline-block;
       border: 1px solid #ccc;
@@ -63,7 +112,12 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-      .child-style {
-            
-            
-        }
+  
+    .eventButton{
+      padding: 6px 10px;
+      cursor: pointer;
+      
+    }
+
+
+  
