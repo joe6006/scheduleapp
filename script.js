@@ -48,6 +48,28 @@ const addEvent= document.getElementById('addEvent');
             dateInput.setAttribute('name', 'preferredDate');
             dateInput.setAttribute('required','true');
 
+//save button
+localStorage.setItem('eventName',eventName.value);
+localStorage.setItem('eventTime',eventTime.value);
+localStorage.setItem('eventDate',eventDate.value);
+const createSave = document.createElement('button');
+createSave.classList.add('saveButton');
+
+createSave.addEventListener('click', ()=>{
+
+const tag = document.createElement('h5');
+
+tag.textContent = "`eventName`, at `eventTime`.";
+
+
+
+//localstorage
+
+
+
+
+
+
             //close button
             const createClose = document.createElement('button');
             createClose.classList.add('closePopup');
@@ -62,10 +84,11 @@ const addEvent= document.getElementById('addEvent');
             eventForm.appendChild(dateInput);
             eventForm.appendChild(eventTime);
             eventForm.appendChild(timeInput);
-            eventForm.appendChild(eventName)
+            eventForm.appendChild(eventName);
             eventForm.appendChild(nameInput);
             createContent.appendChild(eventForm);
             createContent.appendChild(createClose);
+createContent.appendChild(createSave);
             createBox.appendChild(createContent);
             document.body.appendChild(createBox);
                                 
